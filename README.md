@@ -35,7 +35,7 @@ Clone this project on your computer then install all required packages in fronte
 ### Backend
 
 ```bash
-  cd frontend
+  cd backend
   npm i
   npm start
 ```
