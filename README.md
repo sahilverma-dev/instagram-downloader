@@ -13,9 +13,9 @@ Now you can download all the Photos and Videos of an Instagram User. No Restrict
 
 ## Screenshots
 
-![Home](https://i.ibb.co/Ph3Bjk3/home.png)
+![Home](https://i.ibb.co/pzGCwqG/home.png)
 ![Download Page](https://i.ibb.co/TKrPVs6/download-page.png)
-![User Profile](https://i.ibb.co/G54hFqZ/user-profile.png)
+![User Profile](https://i.ibb.co/wzFvYfn/user-profile.png)
 
 ## Installation
 
