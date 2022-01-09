@@ -13,16 +13,15 @@ const Download = () => {
   // const user = useContext(AuthProvider);
   useEffect(() => {
     const getData = async () => {
-      const { data } = await axios(`http://localhost:1234?id=${id}`);
+      const { data } = await axios(`http://localhost:1234/post/${id}`);
       if (data) {
         setPhotoData(data);
         setLoading(false);
       }
       if (!data) setError(true);
-      console.log(data);
     };
     getData();
-  }, []);
+  }, [id]);
   return (
     <div className="min-h-screen p-2 dark:bg-slate-600 max-w-7xl rounded mx-auto">
       {loading && !error ? (
@@ -34,19 +33,19 @@ const Download = () => {
               <PostCard
                 key={index}
                 data={{
-                  imgSrc: item?.src,
-                  userSrc: photoData?.userSrc,
-                  userName: photoData?.owner?.username,
-                  displayName: photoData?.owner.full_name,
-                  isVerified: photoData?.owner.is_verified,
+                  imgSrc: item?.displayUrl,
+                  userSrc: photoData?.user?.profilePic,
+                  userName: photoData?.user?.username,
+                  displayName: photoData?.user?.fullName,
+                  isVerified: photoData?.user.isDerified,
                   isVideo1: item?.isVideo,
                   videoLink1: item?.video_url,
                 }}
                 isVideo={photoData?.isVideo}
                 downloadData={{
-                  link1: item?.downloadImages[0]?.src,
-                  link2: item?.downloadImages[1]?.src,
-                  link3: item?.downloadImages[2]?.src,
+                  link1: item?.resolutions[0]?.src,
+                  link2: item?.resolutions[1]?.src,
+                  link3: item?.resolutions[2]?.src,
                 }}
                 videoLink={photoData?.videoUrl}
               />
@@ -54,17 +53,17 @@ const Download = () => {
           ) : (
             <PostCard
               data={{
-                imgSrc: photoData?.imgSrc,
-                userSrc: photoData?.userSrc,
-                userName: photoData?.owner?.username,
-                isVerified: photoData?.owner.is_verified,
-                displayName: photoData?.owner.full_name,
+                imgSrc: photoData?.mainContent.displayUrl,
+                userSrc: photoData?.user?.profilePic,
+                userName: photoData?.user?.username,
+                isVerified: photoData?.user?.isVerified,
+                displayName: photoData?.user?.fullName,
               }}
               isVideo={photoData?.isVideo}
               downloadData={{
-                link1: photoData?.singleImage[0]?.src,
-                link2: photoData?.singleImage[1]?.src,
-                link3: photoData?.singleImage[2]?.src,
+                link1: photoData?.mainContent?.resolutions[0]?.src,
+                link2: photoData?.mainContent?.resolutions[1]?.src,
+                link3: photoData?.mainContent?.resolutions[2]?.src,
               }}
               videoLink={photoData?.videoUrl}
             />

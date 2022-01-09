@@ -38,6 +38,7 @@ const Contact = () => {
               <a
                 href="mailto:sahilverma.webdev@gmail.com"
                 target="_blank"
+                rel="noreferrer"
                 className="underline"
               >
                 email

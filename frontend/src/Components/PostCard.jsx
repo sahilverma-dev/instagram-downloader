@@ -21,16 +21,17 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
         }`}
       >
         {isVideo && (
-          <a href={videoLink} target="_blank">
+          <a href={videoLink} target="_blank" rel="noreferrer">
             <i className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-7xl opacity-70 fa fa-play"></i>
           </a>
         )}
         {isVideo1 && (
-          <a href={videoLink1} target="_blank">
+          <a href={videoLink1} target="_blank" rel="noreferrer">
             <i className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-white text-7xl opacity-70 fa fa-play"></i>
           </a>
         )}
         <LazyLoadImage
+          effect="blur"
           src={imgSrc}
           alt={displayName}
           placeholderSrc="https://www.slntechnologies.com/wp-content/uploads/2017/08/ef3-placeholder-image.jpg"
@@ -38,7 +39,11 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
         />
       </div>
       <div className="mt-4">
-        <a href={`https://instagram.com/${userName}`} target="_blank">
+        <a
+          href={`https://instagram.com/${userName}`}
+          target="_blank"
+          rel="noreferrer"
+        >
           <div className="flex gap-1">
             <LazyLoadImage
               src={userSrc}
@@ -62,6 +67,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link1}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>640px
@@ -69,6 +75,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link2}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>750px
@@ -76,6 +83,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link3}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>1080px
@@ -84,6 +92,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
             <a
               href={videoLink1 || videoLink}
               target="_blank"
+              rel="noreferrer"
               className="block bg-blue-500 mt-2 w-full py-2 px-4 font-bold text-white rounded text-center"
             >
               <i className="fa fa-video mr-2"></i>Donload Video
@@ -95,6 +104,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link1}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>640px
@@ -102,6 +112,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link2}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>750px
@@ -109,6 +120,7 @@ const PostCard = ({ data, downloadData, isVideo, videoLink }) => {
               <a
                 href={link3}
                 target="_blank"
+                rel="noreferrer"
                 className="bg-blue-500 w-full py-2 px-4 font-bold text-white rounded text-center"
               >
                 <i className="fa fa-image mr-2"></i>1080px

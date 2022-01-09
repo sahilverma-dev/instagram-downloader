@@ -31,7 +31,7 @@ const App = () => {
           <Route exact path="/video-downloader/" element={<VideoDownload />} />
           <Route exact path="/reel-downloader/" element={<ReelDownload />} />
           <Route exact path="/user-profile/" element={<UserProfile />} />
-          <Route exact path="/user/:id" element={<User />} />
+          <Route exact path="/user/:username" element={<User />} />
           <Route path="*" element={<Notfound />} />
         </Routes>
       </main>
