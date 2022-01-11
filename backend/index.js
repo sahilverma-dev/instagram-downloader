@@ -13,6 +13,7 @@ app.listen(PORT, () => {
 
 app.use(cors());
 
+// change
 const getBase64 = async (link) => {
   const base64 = await imageToBase64(link);
   return `data:image/jpeg;base64,${base64}`;
